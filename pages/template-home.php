@@ -18,12 +18,12 @@ if ( $background_images || $title || $sub_title || have_rows( 'climb' ) ): ?>
 				<?php if (have_rows( 'climb' )): ?>
 					<form action="#" class="select-form">
 						<select>
-							<option class="hideme"><?php _e('Climb','base') ?></option>
+							<option class="hideme"><?php _e('Choose a Challenge','base') ?></option>
 							<?php while ( have_rows( 'climb' ) ) : the_row(); ?>
 								<option value="<?php echo esc_url(get_sub_field( 'link' ))?>"><?php the_sub_field( 'title' ) ?></option>
 							<?php endwhile; ?>
 						</select>
-						<button type="submit" class="btn btn-danger"><?php _e('Join Climb','base') ?></button>
+						<button type="submit" class="btn btn-danger"><?php _e('Join Challenge','base') ?></button>
 					</form>
 				<?php endif ?>
 				<?php if ($sub_title = get_field( 'sub_title' )): ?>
